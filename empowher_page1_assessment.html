@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EmpowHer </title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+      backdrop-filter: blur(8px);
+    }
+    header {
+      background-color: rgba(200, 80, 192, 0.9);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .questionnaire {
+      background: rgba(255, 255, 255, 0.95);
+      margin-top: 30px;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      max-width: 750px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+    }
+    select, input[type=text] {
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 30px;
+      background-color: #C850C0;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background-color: #a03aa7;
+    }
+    .chat-bot {
+      margin-top: 40px;
+      background: rgba(253, 242, 251, 0.95);
+      border: 1px solid #c985bc;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 750px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .speak-icon {
+      cursor: pointer;
+      margin-left: 10px;
+      color: #C850C0;
+    }
+    .disclaimer {
+      font-size: 14px;
+      margin-top: 25px;
+      color: #555;
+      text-align: center;
+      max-width: 750px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    a {
+      color: #C850C0;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>✨ EmpowHer Assessment</h1>
+  <p>Begin your journey to digital safety and empowerment — for all identities.</p>
+</header>
+
+<div class="questionnaire">
+  <label>Who are you? <span onclick="speakText('Who are you?')" class="speak-icon">🔊</span></label>
+  <select>
+    <option value="">Select</option>
+    <option>Teen Girl</option>
+    <option>Mother</option>
+    <option>Disabled Woman</option>
+    <option>LGBTQ+ Individual</option>
+    <option>Ally / Supportive Male</option>
+  </select>
+
+  <label>1. Have you ever experienced online harassment? <span onclick="speakText(this.parentElement.innerText)" class="speak-icon">🔊</span></label>
+  <select>
+    <option value="">Select</option>
+    <option>Yes</option>
+    <option>No</option>
+  </select>
+
+  <label>2. What platform do you feel least safe on? <span onclick="speakText(this.parentElement.innerText)" class="speak-icon">🔊</span></label>
+  <input type="text" placeholder="e.g., Instagram, WhatsApp, Twitter" />
+
+  <label>3. How often do you receive unwanted messages or DMs? <span onclick="speakText(this.parentElement.innerText)" class="speak-icon">🔊</span></label>
+  <select>
+    <option value="">Select</option>
+    <option>Daily</option>
+    <option>Weekly</option>
+    <option>Occasionally</option>
+    <option>Never</option>
+  </select>
+
+  <label>4. Do you feel confident reporting harmful behavior online? <span onclick="speakText(this.parentElement.innerText)" class="speak-icon">🔊</span></label>
+  <select>
+    <option value="">Select</option>
+    <option>Yes</option>
+    <option>No</option>
+  </select>
+
+  <label>5. Have you ever received support or advice from a digital safety platform? <span onclick="speakText(this.parentElement.innerText)" class="speak-icon">🔊</span></label>
+  <select>
+    <option value="">Select</option>
+    <option>Yes</option>
+    <option>No</option>
+  </select>
+
+  <label>6. Have you ever felt anxious or emotionally drained after using social media? <span onclick="speakText(this.parentElement.innerText)" class="speak-icon">🔊</span></label>
+  <select>
+    <option value="">Select</option>
+    <option>Yes, frequently</option>
+    <option>Occasionally</option>
+    <option>No</option>
+  </select>
+
+  <label>7. Do you feel pressure to look or act a certain way online? <span onclick="speakText(this.parentElement.innerText)" class="speak-icon">🔊</span></label>
+  <select>
+    <option value="">Select</option>
+    <option>Yes</option>
+    <option>Sometimes</option>
+    <option>No</option>
+  </select>
+
+  <label>8. Would you like personalized digital well-being tips from our AI Copilot? <span onclick="speakText(this.parentElement.innerText)" class="speak-icon">🔊</span></label>
+  <select>
+    <option value="">Select</option>
+    <option>Yes, that would help</option>
+    <option>Maybe later</option>
+    <option>No</option>
+  </select>
+
+  <button onclick="location.href='empowher_page2_features.html'">✅ Submit & Continue</button>
+</div>
+
+<div class="chat-bot">
+  <strong>🤖 EmpowHer AI Assistant</strong>
+  <p>Need help answering? Type or <button onclick="startVoice()" style="background:none; border:none; color:#C850C0; cursor:pointer;">🎙 Speak</button></p>
+  <input id="chatInput" type="text" placeholder="Ask me anything..." style="width:100%; padding:10px; border-radius:5px; border:1px solid #ccc;">
+  <button onclick="sendToBot()">Send</button>
+</div>
+
+<p class="disclaimer">
+  🔐 Your answers are anonymous and confidential. We protect you under <a href="#">Safety by Design</a> and data dignity principles.
+</p>
+
+<script>
+  function speakText(text) {
+    const synth = window.speechSynthesis;
+    const utterThis = new SpeechSynthesisUtterance(text);
+    utterThis.lang = 'en-US';
+    synth.speak(utterThis);
+  }
+
+  function sendToBot() {
+    const msg = document.getElementById("chatInput").value;
+    speakText("Let me check that for you");
+    console.log("User asked: ", msg);
+  }
+
+  function startVoice() {
+    const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+    recognition.lang = 'en-US';
+    recognition.start();
+    recognition.onresult = function(event) {
+      document.getElementById('chatInput').value = event.results[0][0].transcript;
+    };
+  }
+</script>
+
+</body>
+</html>
